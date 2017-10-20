@@ -1,18 +1,21 @@
-export class Doctor {
+const apiKey = require('./../.env').apiKey;
 
-callApi()
-  return new Promise(function(resolve, reject) {
+export class Doctor {
+  constructor() { ////close this
+}
+
+callApi(query)
+  let promise = new Promise((resolve, reject) => {
     let request = new XMLHttpRequest();
-    let url = `https://api.betterdoctor.com/2016-03-01/doctors?name=${name}&query=${query}&location=97219&skip=0&limit=25&user_key=${apiKey}`;
-    request.onload = function() {
-      if (this.status === 200) {
+    let url =
+    `https://api.betterdoctor.com/2016-03-01/doctors?name=${name}&query=${query}&location=97219&skip=0&limit=10&user_key=${apiKey}`;
+    request.onload = () => {
+      if (request.status === 200) {
         resolve(request.response);
       } else {
         reject(Error(request.statusText));
-        let errorText = JSON.parse(this.responseText);
-        $("#output").text(`There was an error processing your request: ${errorText.meta.message}`);
       }
     };
     request.open("GET", url, true);
     request.send();
-});
+  });
