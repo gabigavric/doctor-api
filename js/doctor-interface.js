@@ -8,8 +8,9 @@ $(document).ready(function() {
     let doctor = new Doctor();
     let concern = $('#concern').val();
     let name = $('#name').val();
-    //do i define promise in here and put the link in here?
-    let promise = doctor.makePromise(`https://api.betterdoctor.com/2016-03-01/doctors?name=${name}&query=${concern}&location=97219&skip=0&limit=10&user_key=${apiKey}`;)
+    //this can't be in the front end but the school examples are shit and they don't show us how to
+    //seperate it
+    let promise = doctor.makePromise(`https://api.betterdoctor.com/2016-03-01/doctors?name=${name}&query=${concern}&location=97219&skip=0&user_key=${apiKey}`);
     doctor.callApi(query);
   });
 

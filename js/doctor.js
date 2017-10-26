@@ -1,8 +1,3 @@
-// const apiKey = require('./../.env').apiKey; DO I NEED THIS?
-
-//ALSO WHERE DO I PUT THIS
-//`https://api.betterdoctor.com/2016-03-01/doctors?name=${name}&query=${query}&location=97219&skip=0&limit=10&user_key=${apiKey}`;
-
 export class Doctor {
 
   makePromise(api_key){
@@ -25,8 +20,7 @@ export class Doctor {
     callApi(promise){
       promise.then(function(response) {
         let body = JSON.parse(response);
-    }
-  );
+    });
 
-}
+  }
 }
