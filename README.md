@@ -2,7 +2,8 @@ Doctor Lookup
 
 Author: Gabrijela Gavric
 
-Description:
+Description:<br>
+
   An application that returns a list of doctors based on medical issue and/or doctor name.
 
 Instructions:
