@@ -3,10 +3,9 @@ Doctor Lookup
 Author: Gabrijela Gavric
 
 Description:<br>
-
   An application that returns a list of doctors based on medical issue and/or doctor name.
 
-Instructions:
+Instructions:<br>
   Go to https://developer.betterdoctor.com/ to sign up for a free API key
 
   On your command line run:
