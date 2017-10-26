@@ -14,12 +14,15 @@ Instructions:
       <li>cd doctor-api</li>
       <li>touch .env</li>
     </ul>
-    Inside the .env file add your api key:
-      exports.apiKey = (your api key)
+  Inside the .env file add your api key:
+    <ul>
+      <li>exports.apiKey = (your api key)</li>
+    </ul>
   Then on your command line run:
-    npm install
-    bower install
-    gulp build
-    gulp serve
-
+    <ul>
+      <li>npm install</li>
+      <li>bower install</li>
+      <li>gulp build</li>
+      <li>gulp serve</li>
+    </ul>
   copyright Gabrijela Gavric © 2017
