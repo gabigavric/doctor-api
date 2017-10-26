@@ -1,4 +1,5 @@
 import { Doctor } from './../js/doctor.js';
+let apiKey = require('./../.env').apiKey;
 
 $(document).ready(function() {
   $("#form").submit(function() {
