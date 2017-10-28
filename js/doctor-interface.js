@@ -15,7 +15,11 @@ console.info("document is ready");
       let data = JSON.parse(response);
       console.info(data);
       let practices = data.data[0].practices;
-      $('#practices').text(`${practices[0].name}`);
+      if(practices.length > 0){
+          $('#practices').text(`${practices[0].name}`);
+      }else{
+          $('#practices').text("No Doctors Found");
+      }
     }, function(error) {
       $('#showErrors').text(`There was an error processing your request: ${error.message}`);
     });
