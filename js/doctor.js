@@ -1,18 +1,16 @@
 export class Doctor {
-  callApi(name,query,location){
+  callApi(name,query){
     let apiKey = require('./../.env').apiKey;
     let promise = new Promise((resolve, reject) => {
       let request = new XMLHttpRequest();
 
-      let url = `https://api.betterdoctor.com/2016-03-01/doctors?user_key=${apiKey}&skip=0&`
+      let url = `https://api.betterdoctor.com/2016-03-01/doctors?` +
+                `user_key=${apiKey}&skip=0&location=45.523%2C-122.676%2C100`;
       if(name!=''){
-        url +=`name=${name}&`
+        url +=`&name=${name}`
       }
       if(query!=''){
-        url += `query=${query}&`
-      }
-      if(location!=''){
-        url += `location=${location}`
+        url += `&query=${query}`
       }
 
       console.info('Console Log Message:' + url);
