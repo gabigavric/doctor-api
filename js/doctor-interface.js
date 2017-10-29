@@ -21,11 +21,11 @@ $(document).ready(function() {
         for (let i = 0; i < data.data.length; i++) {
           let liRecord = `<li>`;
           let profile = data.data[i].profile;
-          liRecord+=`${profile.first_name} ${profile.last_name}`;
+          liRecord+=` ${profile.first_name} ${profile.last_name} `;
           let practices = data.data[i].practices[0];
           if (practices) {
             if (practices.phones) {
-              liRecord+=`${practices.phones[0].number}`;
+              liRecord+=` ${practices.phones[0].number} `;
             }
             if ('#practices.visit_address') {
               let address = practices.visit_address;
